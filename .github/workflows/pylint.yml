@@ -12,7 +12,7 @@ jobs:
           POSTGRES_PORT: 2525
           POSTGRES_USER: dog
           POSTGRES_PASSWORD: gavgav
-          PG_DBNAME: konura
+          POSTGRES_DB: konura
         ports:
         - 2525:5432
     steps:
@@ -65,7 +65,7 @@ jobs:
           POSTGRES_PORT: 2525
           POSTGRES_USER: dog
           POSTGRES_PASSWORD: gavgav
-          PG_DBNAME: konura
+          POSTGRES_DB: konura
         ports:
         - 2525:5432
     steps:
