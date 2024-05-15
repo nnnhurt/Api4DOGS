@@ -14,13 +14,16 @@ jobs:
           POSTGRES_PASSWORD: gavgav
           POSTGRES_DB: konura
         ports:
-        - 2525:5432
+          - 2525:5432
     steps:
-    - uses: actions/checkout@v2
-    - name: Python installation
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.11
+      - uses: actions/checkout@v2
+      - name: Import database dump
+        run: |
+          PGPASSWORD=gavgav psql -h 127.0.0.1 -U dog -d konura -f dump.sql
+      - name: Python installation
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
 
   linter_for_main:
     name: Flake8 app.py & test_api.py
