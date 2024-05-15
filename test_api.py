@@ -34,7 +34,7 @@ def test_index_page(client):
 def test_get_random_dog_image(client):
     """
     Test to ensure that the endpoint for fetching a random
-    dog image returns either a status code 200 or 404.
+    dog image returns either a status code 200.
 
     Args:
         client: Flask test client.
@@ -49,7 +49,7 @@ def test_get_random_dog_image(client):
 def test_get_random_dog_color(client):
     """
     Test to ensure that the endpoint for fetching a random dog
-    image returns either a status code 200 or 404.
+    image returns either a status code 404.
 
     Args:
         client: Flask test client.
